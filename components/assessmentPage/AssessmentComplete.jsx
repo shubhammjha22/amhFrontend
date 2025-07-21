@@ -42,13 +42,13 @@ export default function AssessmentComplete({
           <div className="text-center mb-8">
             <div className="flex items-center justify-center space-x-8 mb-6">
               <div className={`text-8xl ${getScoreColor(score)}`}>{score}%</div>
-              <div
+              {/* <div
                 className={`text-6xl ${getScoreColor(
                   score
                 )} border-2 border-current rounded-full w-24 h-24 flex items-center justify-center`}
               >
                 {grade}
-              </div>
+              </div> */}
             </div>
             <p className="text-gray-300 text-xl mb-2">
               Outscale Readiness Score
