@@ -76,7 +76,7 @@ export default function DriveCards({}) {
       {painPoints.map((point, index) => (
         <div
           key={index}
-          className="relative group cursor-pointer max-w-md h-[450px]  "
+          className="relative group cursor-pointer  h-[450px]  "
           onClick={() => handleCardClick(index)}
         >
           <div
