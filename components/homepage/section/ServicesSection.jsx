@@ -9,7 +9,7 @@ import {
   Zap,
   Brain,
 } from "lucide-react";
-import ServicePillar from "../homepage/ServicePillar";
+import ServicePillar from "../ServicePillar";
 
 const icons = {
   users: Users,

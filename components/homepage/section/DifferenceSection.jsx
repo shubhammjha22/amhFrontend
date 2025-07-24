@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import MotionWrapper from "../Animation/motionWrapper";
+import MotionWrapper from "../../Animation/motionWrapper";
 
 export default function DifferenceSection({ difference }) {
   return (

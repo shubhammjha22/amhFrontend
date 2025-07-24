@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import { questions, steps } from "@/lib/assessmentUtil";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { StepIndicator } from "./StepsIndicator";
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Label } from "../ui/label";
+import { RadioGroup, RadioGroupItem } from "../../ui/radio-group";
+import { Label } from "../../ui/label";
 import AssessmentComplete from "./AssessmentComplete";
 
 const getOperationsScore = (answers = {}) => {

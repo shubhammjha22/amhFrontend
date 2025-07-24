@@ -2,13 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ScrollIndicator from "../homepage/ScrollIndicator";
+import ScrollIndicator from "../ScrollIndicator";
 
 export default function HeroSection({ hero }) {
   return (
     <section className="min-h-screen bg-gradient-to-br from-black via-[#0a1a0a] to-[#001a0a] relative overflow-hidden">
       {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-40">
+      <div className="absolute inset-0 z-10 opacity-40">
         <div
           className="absolute inset-0"
           style={{
@@ -93,7 +93,7 @@ export default function HeroSection({ hero }) {
 
       {/* Floating Geometric Shapes */}
       <div
-        className="absolute left-24 -top-4 inset-0 pointer-events-none"
+        className="absolute left-24 -top-4 z-10 inset-0 pointer-events-none"
         style={{ zIndex: 2 }}
       >
         {/* Large Hexagon */}
@@ -110,13 +110,13 @@ export default function HeroSection({ hero }) {
         </div>
 
         {/* Medium Rectangle */}
-        <div className="absolute top-1/3 left-1/5 w-24 h-16 border-2 border-[#84CC16]/30 bg-[#22C55E]/10 backdrop-blur-sm rounded-lg opacity-60"></div>
+        <div className="absolute z-10 top-1/3 left-1/5 w-24 h-16 border-2 border-[#84CC16]/30 bg-[#22C55E]/10 backdrop-blur-sm rounded-lg opacity-60"></div>
 
         {/* Small Diamond */}
-        <div className="absolute top-2/3 right-1/3 w-16 h-16 rotate-45 border-2 border-[#10B981]/40 bg-[#84CC16]/10 backdrop-blur-sm opacity-50"></div>
+        <div className="absolute z-10 top-2/3 right-1/3 w-16 h-16 rotate-45 border-2 border-[#10B981]/40 bg-[#84CC16]/10 backdrop-blur-sm opacity-50"></div>
 
         {/* Floating Screens */}
-        <div className="absolute top-1/2 left-1/4 w-20 h-14 bg-[#22C55E]/20 backdrop-blur-md border border-[#22C55E]/50 rounded-lg opacity-70">
+        <div className="absolute z-10 top-1/2 left-1/4 w-20 h-14 bg-[#22C55E]/20 backdrop-blur-md border border-[#22C55E]/50 rounded-lg opacity-70">
           <div className="w-full h-2 bg-[#22C55E]/60 rounded-t-lg"></div>
           <div className="p-2 space-y-1">
             <div className="w-3/4 h-1 bg-[#84CC16]/60 rounded"></div>
@@ -125,7 +125,7 @@ export default function HeroSection({ hero }) {
           </div>
         </div>
 
-        <div className="absolute top-1/3 left-64 w-20 h-14 bg-[#22C55E]/20 backdrop-blur-md border border-[#22C55E]/50 rounded-lg opacity-70">
+        <div className="absolute z-10 top-1/3 left-64 w-20 h-14 bg-[#22C55E]/20 backdrop-blur-md border border-[#22C55E]/50 rounded-lg opacity-70">
           <div className="w-full h-2 bg-[#22C55E]/60 rounded-t-lg"></div>
           <div className="p-2 space-y-1">
             <div className="w-3/4 h-1 bg-[#84CC16]/60 rounded"></div>
@@ -137,7 +137,7 @@ export default function HeroSection({ hero }) {
 
       {/* Ambient Glow Effects */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 z-10 pointer-events-none"
         style={{ zIndex: 1 }}
       >
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-[#22C55E]/10 rounded-full blur-3xl opacity-60"></div>
@@ -147,7 +147,7 @@ export default function HeroSection({ hero }) {
 
       {/* Hero Content */}
       <div className="relative z-10 flex items-center min-h-screen px-12 md:px-20 lg:px-32">
-        <div className="text-left max-w-5xl">
+        <div className="text-left z-10 max-w-5xl">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             {hero.title}
             <br />
@@ -164,7 +164,14 @@ export default function HeroSection({ hero }) {
             <div className="absolute inset-0 bg-gradient-to-r from-[#4ADE80] to-[#A3E635] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Button>
         </div>
-
+        <div className="absolute left-10 h-full w-full l">
+          <iframe
+            src="https://my.spline.design/particleaibrain-TYTJPC5ko213RqLBTWTTIG4g"
+            frameBorder="0"
+            className=" ml-[24rem] z-10 -mt-[4rem] w-full h-full inset-0 "
+            allow="autoplay; fullscreen"
+          />
+        </div>
         {/* Scroll Indicator */}
       </div>
       <ScrollIndicator />

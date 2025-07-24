@@ -3,8 +3,8 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "../ui/button";
-import TitanStats from "../homepage/TitanStats";
+import { Button } from "../../ui/button";
+import TitanStats from "../TitanStats";
 
 const ProofResults = () => {
   return (

@@ -1,4 +1,4 @@
-import FlipCards from "../homepage/FlipCard";
+import FlipCards from "../FlipCard";
 
 export default function ProblemsSection({ problems }) {
   return (

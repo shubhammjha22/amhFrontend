@@ -9,8 +9,8 @@ import {
   Puzzle,
   Brain,
 } from "lucide-react";
-import { Button } from "../ui/button";
-import MotionWrapper from "../Animation/motionWrapper";
+import { Button } from "../../ui/button";
+import MotionWrapper from "../../Animation/motionWrapper";
 
 const icons = {
   users: Users,
