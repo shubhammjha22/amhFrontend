@@ -1,27 +1,21 @@
 import {
-  ChevronDown,
   ArrowRight,
-  CheckCircle2,
   Users,
   Target,
   TrendingUp,
-  Star,
   Shield,
   Zap,
   BarChart3,
-  Clock,
-  Award,
-  Lightbulb,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import CTAButton from "../CTAButton";
+import CTAButton from "@/components/business-assessment/components/CTAButton";
 
-export default function BusinessAssesmentHeader() {
-  const navigateToAssignment = () => {
-    // setCurrentPage("assignment");
-  };
-
+export default function CommonSecondOutScaleHeader({ data }) {
+  const firstCTA = data.ctaButtons[0];
+  const FirstIcon = firstCTA.icon;
+  const secondCTA = data.ctaButtons[1];
+  const SecondIcon = secondCTA.icon;
   return (
     <>
       {/* Hero Section */}
@@ -77,23 +71,19 @@ export default function BusinessAssesmentHeader() {
             {/* Operations Excellence Platform Badge */}
             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-2 mb-12">
               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-green-400 text-sm">
-                Operations Excellence Platform
-              </span>
+              <span className="text-green-400 text-sm">{data.badge.label}</span>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-5xl lg:text-6xl xl:text-7xl leading-tight mb-8">
-              Are You Ready to Grow
+              {data.heading.line1}
               <br />
-              <span className="text-green-400">Without Growing Pains?</span>
+              <span className="text-green-400">{data.heading.line2}</span>
             </h1>
 
             {/* Description */}
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
-              At Outscale, we partner with growth-focused companies to handle
-              the critical operations that slow them down, so they can do more
-              of what they love with confidence.
+              {data.description[0]}
             </p>
 
             {/* CTA Buttons */}
@@ -102,39 +92,36 @@ export default function BusinessAssesmentHeader() {
                 href={"/assessment"}
                 className="bg-green-500 hover:bg-green-600 text-black px-8 py-3 rounded-full transition-all duration-200 hover:scale-105 group flex items-center px-[20px] py-[10px]"
               >
-                Take Free Assessment
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {data.ctaButtons[0].text}
+                {FirstIcon && (
+                  <FirstIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                )}
               </CTAButton>
 
               <Button
                 variant="outline"
                 className="border-white text-[rgba(0,0,0,1)] bg-white hover:bg-white/80 hover:text-black px-8 py-3 rounded-full transition-all duration-200 px-[38px] py-[10px]"
               >
-                Learn More
+                {data.ctaButtons[1].text}
+                {SecondIcon && (
+                  <SecondIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                )}
               </Button>
             </div>
 
             {/* Hero Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl text-green-400 mb-2">
-                  500+
-                </div>
-                <div className="text-gray-400">Companies Scaled</div>
+            {data?.stats && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+                {data?.stats.map((item) => (
+                  <div className="text-center" key={item.label}>
+                    <div className="text-4xl lg:text-5xl text-green-400 mb-2">
+                      {item.value}
+                    </div>
+                    <div className="text-gray-400">{item.label}</div>
+                  </div>
+                ))}
               </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl text-green-400 mb-2">
-                  40%
-                </div>
-                <div className="text-gray-400">Average Cost Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl text-green-400 mb-2">
-                  3x
-                </div>
-                <div className="text-gray-400">Faster Growth</div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </section>

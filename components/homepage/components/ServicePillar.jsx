@@ -2,7 +2,7 @@ import { ArrowRight, Brain, TrendingUp, Users } from "lucide-react";
 
 import React from "react";
 import Link from "next/link";
-import MotionWrapper from "../Animation/motionWrapper";
+import MotionWrapper from "../../Animation/motionWrapper";
 
 const icons = {
   users: Users,

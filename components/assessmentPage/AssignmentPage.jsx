@@ -1,5 +1,5 @@
-import { ClientAssignment } from "./ClientAssignment";
-import HeroSection from "./HeroSection";
+import { ClientAssignment } from "./section/ClientAssignment";
+import HeroSection from "./section/HeroSection";
 
 export default function AssignmentPage() {
   return (

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Clock, Target } from "lucide-react";
-import CTAButton from "../CTAButton";
+import CTAButton from "../components/CTAButton";
 
 const FinalCTASection = () => {
   return (

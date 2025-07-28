@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calculator, CheckCircle, Zap } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../../ui/button";
+import Link from "next/link";
+import { ROUTES } from "@/lib/utils";
 
 export function CTABanner() {
   const containerVariants = {
@@ -183,17 +185,19 @@ export function CTABanner() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.2 }}
                 >
-                  <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-black font-bold text-lg px-10 py-6 rounded-2xl shadow-lg shadow-green-500/25 border-0">
-                    <Calculator className="mr-3 w-6 h-6" />
-                    Take Readiness Assessment Test
-                    <motion.div
-                      className="ml-3"
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <ArrowRight className="w-6 h-6" />
-                    </motion.div>
-                  </Button>
+                  <Link href={ROUTES.BUSINESS_ASSESSMENT}>
+                    <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-black font-bold text-lg px-10 py-6 rounded-2xl shadow-lg shadow-green-500/25 border-0">
+                      <Calculator className="mr-3 w-6 h-6" />
+                      Take Readiness Assessment Test
+                      <motion.div
+                        className="ml-3"
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <ArrowRight className="w-6 h-6" />
+                      </motion.div>
+                    </Button>
+                  </Link>
                 </motion.div>
 
                 {/* Supporting Info */}

@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "../../ui/button";
-import TitanStats from "../TitanStats";
+import TitanStats from "../components/TitanStats";
 
 const ProofResults = () => {
   return (

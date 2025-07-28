@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calculator, CheckCircle, Zap } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../../ui/button";
+import Link from "next/link";
+import { ROUTES } from "@/lib/utils";
 
 export function ReadyToSee() {
   const containerVariants = {
@@ -96,11 +98,12 @@ export function ReadyToSee() {
                     Find out what’s slowing you down and how to fix it.
                   </span>
                 </motion.div>
-
-                <Button className="bg-glass-overlay font-dm hover:!from-green-600 hover:bg-glass-overlay/30 hover:scale-105 transition duration-200 hover:!to-emerald-700 text-white text-sm lg:text-base px-10 py-6 rounded-2xl border-0">
-                  <Calculator className="mr-3 w-6 h-6" />
-                  Take Readiness Assessment Test
-                </Button>
+                <Link className="block" href={ROUTES.BUSINESS_ASSESSMENT}>
+                  <Button className="bg-glass-overlay font-dm hover:!from-green-600 hover:bg-glass-overlay/30 hover:scale-105 transition duration-200 hover:!to-emerald-700 text-white text-sm lg:text-base px-10 py-6 rounded-2xl border-0">
+                    <Calculator className="mr-3 w-6 h-6" />
+                    Take Readiness Assessment Test
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </div>

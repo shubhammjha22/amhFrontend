@@ -14,7 +14,7 @@ const Footer = ({
   quickLinks = [
     { label: "About", href: "/about" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Career", href: "/career" },
+    { label: "Careers", href: "/careers" },
   ],
   services = {
     title: "OUR SERVICES",

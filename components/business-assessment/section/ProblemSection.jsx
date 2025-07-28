@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import CTAButton from "../CTAButton";
+import CTAButton from "../components/CTAButton";
 
 const ProblemSection = () => {
   return (

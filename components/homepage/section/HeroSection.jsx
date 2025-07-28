@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ScrollIndicator from "../ScrollIndicator";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 export default function HeroSection({ hero }) {
   return (
@@ -156,13 +156,15 @@ export default function HeroSection({ hero }) {
             </span>
           </h1>
 
-          <Button
-            variant="outline"
-            className="bg-white/10 backdrop-blur-sm border-textPrimary/60 text-textPrimary hover:bg-textPrimary/20 hover:text-textSecondary hover:border-textSecondary px-6 py-2 rounded-lg transition-all duration-300"
-          >
-            <Link href={hero.ctaLink}>{hero.ctaText}</Link>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#4ADE80] to-[#A3E635] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </Button>
+          <Link href={hero.ctaLink}>
+            <Button
+              variant="outline"
+              className="bg-white/10 backdrop-blur-sm border-textPrimary/60 text-textPrimary hover:bg-textPrimary/20 hover:text-textSecondary hover:border-textSecondary px-6 py-2 rounded-lg transition-all duration-300"
+            >
+              {hero.ctaText}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#4ADE80] to-[#A3E635] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Button>
+          </Link>
         </div>
         <div className="absolute left-10 h-full w-full l">
           <iframe

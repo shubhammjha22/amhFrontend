@@ -1,5 +1,5 @@
-import DriveCards from "../DriveImpactCard";
-import FlipCards from "../FlipCard";
+import DriveCards from "../components/DriveImpactCard";
+import FlipCards from "../components/FlipCard";
 
 export default function DriveImpact({ problems }) {
   return (

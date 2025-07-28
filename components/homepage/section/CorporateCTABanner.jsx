@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, TrendingUp, Users } from "lucide-react";
 
 import Image from "next/image";
 import { Button } from "../../ui/button";
+import Link from "next/link";
+import { ROUTES } from "@/lib/utils";
 
 export function CorporateCTABanner() {
   const containerVariants = {
@@ -154,19 +156,21 @@ export function CorporateCTABanner() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Button
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-6 text-lg rounded-2xl shadow-lg shadow-green-500/25 border-0 group transition-all duration-300"
-                  size="lg"
-                >
-                  Take the Outscale Readiness Assessment
-                  <motion.div
-                    className="ml-3"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
+                <Link href={ROUTES.BUSINESS_ASSESSMENT}>
+                  <Button
+                    className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-6 text-lg rounded-2xl shadow-lg shadow-green-500/25 border-0 group transition-all duration-300"
+                    size="lg"
                   >
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.div>
-                </Button>
+                    Take the Outscale Readiness Assessment
+                    <motion.div
+                      className="ml-3"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                    </motion.div>
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
 

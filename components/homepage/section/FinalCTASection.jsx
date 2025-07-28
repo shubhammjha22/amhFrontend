@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calculator, CheckCircle, Zap } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../../ui/button";
+import Link from "next/link";
+import { ROUTES } from "@/lib/utils";
 
 export function FinalCTASection() {
   const containerVariants = {
@@ -100,11 +102,12 @@ export function FinalCTASection() {
                     Is your organization built to outscale?
                   </span>
                 </motion.div>
-
-                <Button className="bg-glass-overlay mx-auto  font-dm hover:!from-green-600 hover:bg-glass-overlay/30 hover:scale-105 transition duration-200 hover:!to-emerald-700 text-white text-sm lg:text-base px-10 py-6 rounded-2xl border-0">
-                  <Calculator className="mr-3 w-6 h-6" />
-                  Take the Outscale Readiness Assessment Test
-                </Button>
+                <Link href={ROUTES.BUSINESS_ASSESSMENT} className="block">
+                  <Button className="bg-glass-overlay mx-auto  font-dm hover:!from-green-600 hover:bg-glass-overlay/30 hover:scale-105 transition duration-200 hover:!to-emerald-700 text-white text-sm lg:text-base px-10 py-6 rounded-2xl border-0">
+                    <Calculator className="mr-3 w-6 h-6" />
+                    Take the Outscale Readiness Assessment Test
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </div>

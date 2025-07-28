@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { ROUTES } from "@/lib/utils";
 import { ArrowRight, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -18,13 +20,15 @@ export default function CTASection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                className="bg-green-500 hover:bg-green-600 text-black px-12 py-4 rounded-full text-lg transition-all duration-200 hover:scale-105 group"
-                // onClick={onBack}
-              >
-                Start Your Assessment
-                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href={ROUTES.BUSINESS_ASSESSMENT}>
+                <Button
+                  className="bg-green-500 hover:bg-green-600 text-black px-12 py-4 rounded-full text-lg transition-all duration-200 hover:scale-105 group"
+                  // onClick={onBack}
+                >
+                  Start Your Assessment
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-black px-12 py-4 rounded-full text-lg transition-all duration-200"
