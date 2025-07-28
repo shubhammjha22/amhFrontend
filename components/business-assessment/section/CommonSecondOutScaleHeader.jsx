@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Users,
   Target,
   TrendingUp,
@@ -90,7 +89,7 @@ export default function CommonSecondOutScaleHeader({ data }) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <CTAButton
                 href={"/assessment"}
-                className="bg-green-500 hover:bg-green-600 text-black px-8 py-3 rounded-full transition-all duration-200 hover:scale-105 group flex items-center px-[20px] py-[10px]"
+                className="bg-green-500 hover:bg-green-600 text-black px-8 py-3 rounded-full transition-all duration-200 hover:scale-105 group flex items-center "
               >
                 {data.ctaButtons[0].text}
                 {FirstIcon && (
@@ -100,7 +99,7 @@ export default function CommonSecondOutScaleHeader({ data }) {
 
               <Button
                 variant="outline"
-                className="border-white text-[rgba(0,0,0,1)] bg-white hover:bg-white/80 hover:text-black px-8 py-3 rounded-full transition-all duration-200 px-[38px] py-[10px]"
+                className="border-white text-[rgba(0,0,0,1)] bg-white hover:bg-white/80 hover:text-black px-8 py-3 rounded-full transition-all duration-200 "
               >
                 {data.ctaButtons[1].text}
                 {SecondIcon && (
